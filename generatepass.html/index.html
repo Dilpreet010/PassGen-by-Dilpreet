@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassGen by Dilpreet</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="loader-container">
+            <div class="circle"></div>
+            <span class="load">LOADING....</span>
+    </div>
+      
+    <div id="wrapper">
+        <nav>
+            <div class="nav-logo">
+                <img class="nav-logo-img" src="../images/logo.png" alt="">
+                <h2>PassGen</h2>
+            </div>
+            <div class="nav-hyperlinks">
+                <a href="../index.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">How It Works</a>
+            </div>
+            <button class="nav-button">Sign In</button>
+        </nav>
+        <header>
+            <div class="left-header">
+             <h2 class="heading">How to Use PassGen</h2>
+             <div class="steps">
+                <div class="step"><b>Set Password Length:</b> Use the slider to choose the desired length of your password.</div>
+                <div class="step"><b>Select Options:</b> Choose to include numbers, symbols, uppercase, and lowercase letters. </div>
+                <div class="step"><b>Generate Password:</b> Click on the "Generate Password" button.</div>
+                <div class="step"><b>Copy Password:</b> Click on the copy icon to copy the generated password to your clipboard.</div>
+                <div class="step"><b>Reset:</b> Click the Reset button to clear all selections and reset the password length to its default value.</div>
+             </div> 
+             <div class="num num1">1</div>
+             <div class="num num2">2</div>
+             <div class="num num3">3</div>
+             <div class="num num4">4</div>
+             <div class="num num5">5</div>
+            </div>
+            <div class="right-header">
+                <div class="container">
+                   <h1>Password Generator</h1>
+
+                   <div class="display-container">
+                        <!--password display container-->
+                        <input readonly placeholder="Password" class="display" data-passwordDisplay>
+            
+                        <button class="copyBtn" data-copy>
+                            <span class="tooltip" data-copyMsg></span>
+                            <img src="../images/copy.svg" alt="copy" width="23" height="23">
+                        </button>
+            
+                    </div>
+            
+                    <div class="input-container">
+            
+                        <!--password length section-->
+                        <div class="length-container">
+                            <p>Password Length</p>
+                            <p data-lengthNumber>0</p>
+                        </div>
+                        
+                        <!--slider-->
+                        <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+            
+                        <!-- checkboxes-->
+                        <div class="check">
+                            <input type="checkbox" id="uppercase">
+                            <label for="uppercase">Includes Uppercase letters</label>
+                        </div>
+            
+                        <div class="check">
+                            <input type="checkbox" id="lowercase">
+                            <label for="lowercase">Includes Lowercase letters</label>
+                        </div>
+            
+                        <div class="check">
+                            <input type="checkbox" id="numbers">
+                            <label for="numbers">Includes Numbers </label>
+                        </div>
+            
+                        <div class="check">
+                            <input type="checkbox" id="symbols">
+                            <label for="symbols">Includes Symbols </label>
+                        </div>
+            
+                        <!-- strength section-->
+                        <div class="strength-container">
+                            <p>Strength</p>
+                            <div class="indicator" data-indicator></div>
+                        </div>
+            
+                        <!-- generate password-->
+                         <div class="password-btn">
+                        <button class="generateButton">Generate</button>
+                        <button class="resetButton">Reset</button>
+                         </div>
+                    </div>
+                </div>     
+   
+            </div>
+        </header>
+        <footer class="footer">
+            <p>© 2024 PassGen by Dilpreet. All rights reserved.</p>
+            <p>Developed by Dilpreet Kaur</p>
+            <p>
+              <a href="https://www.linkedin.com/in/dilpreet-kaur-3023a7220/" target="_blank">LinkedIn</a> | 
+              <a href="https://github.com/Dilpreet010" target="_blank">GitHub</a> | 
+              <a href="mailto:dilpreetkaur7075@gmail.com">Contact</a>
+            </p>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader-container').fadeToggle();
+        },1000);
+    </script>   
+</body>
+</html>
