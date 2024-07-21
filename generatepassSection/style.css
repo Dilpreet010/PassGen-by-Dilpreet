@@ -94,6 +94,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 }
 .nav-logo{
     display: flex;
@@ -138,6 +139,46 @@ nav{
 .nav-button:hover{
     background-color: black;
     color: var(--white-bg);
+}
+.hamburg{
+    scale: 0;
+    position: absolute;
+    z-index: 1000;
+}
+.hamburg-wrapper{
+    background-color: var(--green-bg);
+    position: fixed;
+    top: 0%;
+    right: -1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(10px);
+    width: 0;
+    height:900px;
+    z-index: 1000;
+    padding: 20px 10px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(104, 101, 101, 0.484);
+    visibility:hidden;
+    overflow-x: hidden;
+}
+.hyperlink{
+    margin-top: 3rem;
+}
+.cross{
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+}
+.hyperlink a {
+    padding: 20px 6px;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: black;
+    display: block;
+    transition: 0.5s;
 }
 header{
     display: flex;
@@ -526,8 +567,18 @@ footer a:hover{
     .nav-button{
         scale: 0;
     }
+    .hamburg{
+        scale: 1;
+        top: 1%;
+        left: 70%;
+    }
 }
 @media (max-width:490px){
+    .hamburg{
+        scale: 1;
+        top: 1%;
+        left: 68%;
+    }
    .left-header{
     width: 1%;
    }
