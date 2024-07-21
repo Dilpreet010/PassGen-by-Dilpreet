@@ -111,6 +111,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    scale: 1;
 }
 .nav-hyperlinks a{
     text-decoration: none;
@@ -132,6 +133,7 @@ nav{
     background-color: var(--white-bg);
     transition: all 0.5s;
     cursor: pointer;
+    scale: 1;
 }
 .nav-button:hover{
     background-color: black;
@@ -195,7 +197,7 @@ header{
     border: none;
     animation: imgAnimation;
     animation: imgAnimation 2s infinite ease-in-out ;
-
+    scale: 1;
 }
 @keyframes imgAnimation{
     50%{
@@ -223,4 +225,81 @@ footer a{
 }
 footer a:hover{
     font-weight: 800;
+}
+@media (max-width:1220px){
+    .header-img{
+        scale: 0;
+    }
+    .left-header{
+        width: 100%;
+    }
+    .right-header{
+        width: 10%;
+        background-color: var(--cream-bg);
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .footer p:nth-child(1){
+       scale: 1;
+    }
+    .footer p{
+        margin-top: 1.2rem;
+        
+    }
+}
+@media (max-width:850px){
+    .nav-hyperlinks{
+        scale: 0;
+    }
+    .nav-button{
+        scale: 0;
+    }
+    .header-heading{
+        margin-left: 4rem;
+    }
+    .header-description{
+        margin-left: 4rem;
+    }
+    .header-button{
+        margin-left: 4rem;
+    }
+}
+@media (max-width:450px){
+    .header-heading{
+        margin-left: 2rem;
+        font-size: 33px;
+        width: 100%;
+        z-index: 100;
+    }
+    .header-description{
+        margin-top: 1rem;
+        margin-left: 1rem;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        z-index: 100;
+    }
+    .header-button{
+        margin-left: 2rem;
+    }
+    .header-button{
+        padding: 15px 16px;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .footer p:nth-child(1){
+       scale: 0;
+    }
+    .footer p{
+        margin-top: -2.5rem;
+        
+    }
 }

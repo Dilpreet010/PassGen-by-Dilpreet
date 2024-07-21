@@ -110,7 +110,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-   
+   scale: 1;
 }
 .nav-hyperlinks a{
     text-decoration: none;
@@ -120,6 +120,7 @@ nav{
     padding-left: 10px;
     transition: all 0.5s;
     cursor: pointer;
+  
 }
 .nav-hyperlinks a:hover{
     font-weight: 800;
@@ -132,6 +133,7 @@ nav{
     background-color: var(--white-bg);
     transition: all 0.5s;
     cursor: pointer;
+    scale: 1;
 }
 .nav-button:hover{
     background-color: black;
@@ -159,7 +161,7 @@ header{
     line-height: 3.6rem;
     letter-spacing: 1px;
     color: #464644;
-
+    scale: 1;
 }
 .steps{
     display: flex;
@@ -169,7 +171,7 @@ header{
     width: 100%;
     margin-left: 3rem;
     margin-top: 0.5rem;
-    
+    scale: 1;
 }
 .step{
     opacity: 0;
@@ -209,6 +211,7 @@ header{
     opacity: 0;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     transform: translateX(-100%);
+    scale: 1;
 }
 .num.visible{
     opacity: 1;
@@ -241,6 +244,7 @@ header{
     display: flex;
     align-items: start;
     justify-content: center;
+    scale: 1;
 }
 h1{
     color: var(--pl-white);
@@ -484,3 +488,67 @@ footer a:hover{
     font-weight: 800;
 }
 
+@media (max-width:1050px){
+    .heading{
+        scale: 0;
+    }
+    .num{
+        scale: 0;
+    }
+    .steps{
+        scale: 0;
+    }
+    .left-header{
+        width: 10%;
+        background-color: var(--cream-bg);
+    }
+    .right-header{
+        width: 100%;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .footer p:nth-child(1){
+       scale: 1;
+    }
+    .footer p{
+        margin-top: 1.2rem;
+        
+    }
+}
+@media (max-width:800px){
+    .nav-hyperlinks{
+        scale: 0;
+    }
+    .nav-button{
+        scale: 0;
+    }
+}
+@media (max-width:490px){
+   .left-header{
+    width: 1%;
+   }
+   h1{
+    font-size: 20px;
+   }
+   .display{
+    margin-left: 1rem;
+    margin-right: 1rem
+   }
+   .footer{
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 2rem;
+   }
+   .footer p:nth-child(1){
+    scale: 0;
+   }
+   .footer p{
+    margin-top: -2.5rem;
+    
+   }
+}

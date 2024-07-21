@@ -109,7 +109,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-    
+    scale: 1;
 }
 .nav-hyperlinks a{
     text-decoration: none;
@@ -131,6 +131,7 @@ nav{
     background-color: var(--white-bg);
     transition: all 0.5s;
     cursor: pointer;
+    scale: 1;
 }
 .nav-button:hover{
     background-color: black;
@@ -168,6 +169,7 @@ nav{
     background-color: var(--cream-bg);
     height: 100vh;
     width: 40%;
+    scale: 1;
 }
 .about-section img{
     position: absolute;
@@ -180,6 +182,7 @@ nav{
     border: none;
     animation: imgAnimation;
     animation: imgAnimation 2s infinite ease-in-out ;
+    scale: 1;
 }
 @keyframes imgAnimation{
     50%{
@@ -199,6 +202,9 @@ footer p{
     font-size: 18px;
     font-weight: 600;
 }
+.footer p:nth-child(1){
+    scale: 1;
+ }
 footer a{
     text-decoration: none;
     color: #000;
@@ -209,3 +215,86 @@ footer a:hover{
     font-weight: 800;
 }
 
+@media (max-width:1150px){
+    .about-section img{
+        scale: 0;
+    }
+    .left-container{
+       width: 100vw;
+    }
+    .left-container h2{
+        margin-bottom: 1rem;
+        margin-left: 10rem;
+        width: 100%;
+        z-index: 10;
+    }
+    .left-container p{
+        color: var(--grey-text);
+        font-size: 20px;
+        width: 100%;
+        margin-left: 10rem;
+        text-align: center;
+        z-index: 10;
+    }
+    .nav-hyperlinks{
+        scale: 0;
+    }
+    .nav-button{
+        scale: 0;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .footer p:nth-child(1){
+       scale: 1;
+    }
+    .footer p{
+        margin-top: 1.2rem;
+        
+    }
+
+}
+@media (max-width:750px){
+    .left-container h2{
+        margin-left: 7rem;
+        font-size: 37px;
+    }
+    .left-container p{
+        margin-left: 4rem;
+        font-size: 18px;
+        width: 120%;
+    }
+   
+}
+@media (max-width:450px){
+    .about-section{
+        margin-bottom: 1rem;
+    }
+    .left-container h2{
+        margin-left: 3rem;
+        font-size: 32px;
+    }
+    .left-container p{
+        margin-left: 2rem;
+        font-size: 16px;
+        text-align: start;
+        width: 120%;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .footer p:nth-child(1){
+       scale: 0;
+    }
+    .footer p{
+        margin-top: -2.5rem;
+        
+    }
+
+}

@@ -110,7 +110,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 40px;
-   
+    scale: 1;
 }
 .nav-hyperlinks a{
     text-decoration: none;
@@ -120,6 +120,7 @@ nav{
     padding-left: 10px;
     transition: all 0.5s;
     cursor: pointer;
+    
 }
 .nav-hyperlinks a:hover{
     font-weight: 800;
@@ -132,6 +133,7 @@ nav{
     background-color: var(--white-bg);
     transition: all 0.5s;
     cursor: pointer;
+    scale: 1;
 }
 .nav-button:hover{
     background-color: black;
@@ -251,6 +253,7 @@ h1{
     line-height: 1.2;
     margin-top: 2.2rem;
     margin-bottom: 1rem;
+    scale: 1;
 }
 .display-container {
     position: relative;
@@ -261,6 +264,7 @@ h1{
     margin: 0.5rem 0;
     padding-top: 0.3rem;
     margin-bottom: 1rem;
+    scale: 1;
 }
 
 
@@ -305,6 +309,7 @@ h1{
     padding: 2rem;
     box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.123);
     border-bottom: 0.35rem solid var(--green-bg);
+    scale: 1;
 }
 .length-container {
     display: flex;
@@ -484,3 +489,113 @@ footer a:hover{
     font-weight: 800;
 }
 
+@media (max-width:1050px){
+    .right-header{
+        background-color: var(--green-bg);
+        width: 10%;
+    }
+    .left-header{
+        width: 100vw;
+    }
+    h1{
+        scale: 0;
+    }
+    .display-container{
+        scale: 0;
+    }
+    .input-container{
+        scale: 0;
+    }
+    .heading{
+        margin-left: 20rem;
+    }
+    .num1{
+        top: 12.5%;
+        left: 3%;
+    }
+    .num2{
+        top: 27%;
+        left: 3%;
+    }
+    .num3{
+        top: 41.5%;
+        left: 3%;
+    }
+    .num4{
+        top: 56%;
+        left: 3%;
+    }
+    .num5{
+        left: 3%;
+        top: 70%;
+    }
+    .steps div{
+        padding-left: 2rem;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .footer p:nth-child(1){
+       scale: 1;
+    }
+    .footer p{
+        margin-top: 1.2rem;
+        
+    }
+}
+@media (max-width:790px){
+    .nav-hyperlinks{
+        scale: 0;
+    }
+    .nav-button{
+        scale: 0;
+    }
+    .heading{
+        margin-left: 12rem;
+    }
+}
+@media (max-width:490px){
+    .heading{
+        margin-left: 3rem;
+    }
+    .num1{
+        top: 12.5%;
+        left: 5%;
+    }
+    .num2{
+        top: 27%;
+        left: 5%;
+    }
+    .num3{
+        top: 41.5%;
+        left: 5%;
+    }
+    .num4{
+        top: 56%;
+        left: 5%;
+    }
+    .num5{
+        left: 5%;
+        top: 70%;
+    }
+    .steps div{
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+    }
+    .footer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .footer p:nth-child(1){
+       scale: 0;
+    }
+    .footer p{
+        margin-top: -2.5rem;
+        
+    }
+}
