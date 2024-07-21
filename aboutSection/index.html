@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassGen by Dilpreet</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="loader-container">
+            <div class="circle"></div>
+            <span class="load">LOADING....</span>
+    </div>
+      
+    <div id="wrapper">
+        <nav>
+            <div class="nav-logo">
+                <img class="nav-logo-img" src="../images/logo.png" alt="">
+                <h2>PassGen</h2>
+            </div>
+            <div class="nav-hyperlinks">
+                <a href="../index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="../generatepassSection/index.html">How It Works</a>
+            </div>
+            <button class="nav-button">Sign In</button>
+        </nav>
+        <!-- About Section -->
+       <section id="about" class="about-section">
+          <div class="left-container">
+             <h2>About PassGen </h2>
+             <p>Welcome to PassGen by Dilpreet, your trusted solution for generating strong and secure passwords. Our mission is to help you protect your digital life with ease and confidence. With cyber threats on the rise, it's more important than ever to use robust and unique passwords for all your online accounts. PassGen by Dilpreet makes it simple to create passwords that are both secure and easy to manage.</p>
+             <p>Our tool is designed with user-friendliness in mind. Whether you're a tech-savvy professional or someone who is new to digital security, PassGen by Dilpreet is here to assist you. Our password generator uses advanced algorithms to ensure that each password is unique and highly secure. You can customize the length and complexity of your passwords to suit your specific needs.</p>
+             <p>At PassGen by Dilpreet, we believe in making security accessible to everyone. Our generator is free to use and available online 24/7. We are committed to providing a reliable and efficient service that helps you safeguard your personal and professional information. Join us in our mission to enhance digital security and protect what matters most to you.</p>
+          </div>
+          <div class="right-content">
+
+          </div>
+          <img src="../images/about-pic.png" alt="about-pic">
+       </section>
+        <footer class="footer">
+            <p>© 2024 PassGen by Dilpreet. All rights reserved.</p>
+            <p>Developed by Dilpreet Kaur</p>
+            <p>
+              <a href="https://www.linkedin.com/in/dilpreet-kaur-3023a7220/" target="_blank">LinkedIn</a> | 
+              <a href="https://github.com/Dilpreet010" target="_blank">GitHub</a> | 
+              <a href="mailto:dilpreetkaur7075@gmail.com">Contact</a>
+            </p>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        setTimeout(function(){
+            $('.loader-container').fadeToggle();
+        },1000);
+    </script>   
+</body>
+</html>

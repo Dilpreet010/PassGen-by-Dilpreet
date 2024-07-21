@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+:root{
+    --white-bg: #FFFFFF;
+    --cream-bg: #FFFBE8;
+    --green-bg: #B7F4B1;
+    --grey-text: #747471;
+    --beige-bg: #F4D1B1;
+    --black-bg: #000000;
+}
+.loader-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ensures full viewport height */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: white; /* Optional, but ensures visibility */
+    z-index: 1000; /* Ensures it's on top */
+  }
+body.noscroll {
+    overflow: hidden;
+  }
+.circle{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    animation: circle 1s linear infinite;
+}
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #eb0303;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #1518be;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #10ee40;
+    }
+}
+
+.circle::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgb(214,211,211,0.3);
+}
+.load{
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+    animation: text 2s ease-in-out infinite;
+    line-height: 200px;
+}
+@keyframes text{
+    0%{
+        color: #fff;
+    }
+    33%{
+        color: #ec4164;
+    }
+    66%{
+        color: #259925;
+    }
+}
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#wrapper::-webkit-scrollbar{
+    display: none;
+}
+nav{
+    height: 4.375rem;
+    background-color: var(--white-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.nav-logo-img{
+    height: 50px;
+    width: 80px;
+}
+.nav-hyperlinks{
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    
+}
+.nav-hyperlinks a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.nav-hyperlinks a:hover{
+    font-weight: 800;
+}
+.nav-button{
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--white-bg);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.nav-button:hover{
+    background-color: black;
+    color: var(--white-bg);
+}
+.about-section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.left-container{
+    height: 100vh;
+    background-color: var(--cream-bg);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.left-container h2{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 40px;
+}
+.left-container p{
+   color: var(--grey-text);
+   font-size: 20px;
+   margin-bottom: 2rem;
+   width: 70%;
+   margin-left: 8rem;
+}
+.right-content{
+    background-color: var(--cream-bg);
+    height: 100vh;
+    width: 40%;
+}
+.about-section img{
+    position: absolute;
+    height: 600px;
+    width:600px;
+    top: 7%;
+    left: 53%;
+    z-index: 10;
+    outline: none;
+    border: none;
+    animation: imgAnimation;
+    animation: imgAnimation 2s infinite ease-in-out ;
+}
+@keyframes imgAnimation{
+    50%{
+        top: 8%;
+        bottom:25%;
+    }
+}
+.footer {
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer p{
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+footer a{
+    text-decoration: none;
+    color: #000;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+footer a:hover{
+    font-weight: 800;
+}
+
